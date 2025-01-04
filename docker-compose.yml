@@ -1,0 +1,14 @@
+services:
+  postgres:
+    image: postgres:latest
+    container_name: eturn_db
+    environment:
+      POSTGRES_USER: eturn
+      POSTGRES_PASSWORD: unir_2024
+      POSTGRES_DB: ETURN
+    ports:
+      - "6432:5432"
+    volumes:
+      - ./DB/init.sql:/docker-entrypoint-initdb.d/init.sql:ro
+      # - ./DB/data:/var/lib/postgresql/data
+    restart: always

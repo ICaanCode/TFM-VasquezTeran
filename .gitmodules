@@ -1,0 +1,6 @@
+[submodule "Backend/turnos"]
+	path = Backend/turnos
+	url = git@github.com:ICaanCode/TFM-Turnos_urgencias.git
+[submodule "DB"]
+	path = DB
+	url = git@github.com:ICaanCode/TFM-DB.git

@@ -1,0 +1,44 @@
+# === Archivos de entorno ===
+.env
+
+# === Docker ===
+*.pid
+*.log
+docker-compose.override.yml
+docker-compose.override.local.yml
+docker-compose.override.dev.yml
+docker-compose.override.prod.yml
+
+# Docker volumes, si se montan directorios locales
+volumes/
+tmp/
+data/
+db_data/
+node_modules/
+
+# === Submódulos ===
+# No se ignoran los submódulos en sí, pero sí sus carpetas internas si se generan cosas temporales
+**/.git/modules/*
+
+# === Archivos de compilación y temporales ===
+*.pyc
+__pycache__/
+dist/
+build/
+*.class
+*.o
+*.out
+
+# === IDEs y editores ===
+.vscode/
+.idea/
+*.swp
+*~
+
+# === Logs ===
+logs/
+*.log
+
+# === Sistema operativo ===
+.DS_Store
+Thumbs.db

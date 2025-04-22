@@ -1,6 +1,24 @@
-[submodule "Backend/turnos"]
-	path = Backend/turnos
-	url = git@github.com:ICaanCode/TFM-Turnos_urgencias.git
 [submodule "DB"]
 	path = DB
 	url = git@github.com:ICaanCode/TFM-DB.git
+[submodule "Backend/eureka"]
+	path = Backend/eureka
+	url = git@github.com:ICaanCode/TFM-Eureka.git
+[submodule "Backend/gateway"]
+	path = Backend/gateway
+	url = git@github.com:ICaanCode/TFM-API_Gateway.git
+[submodule "Backend/pacientes"]
+	path = Backend/pacientes
+	url = git@github.com:ICaanCode/TFM-Pacientes.git
+[submodule "Backend/seguridad"]
+	path = Backend/seguridad
+	url = git@github.com:ICaanCode/TFM-Seguridad.git
+[submodule "Backend/servicios"]
+	path = Backend/servicios
+	url = git@github.com:ICaanCode/TFM-Servicios.git
+[submodule "Backend/turnos"]
+	path = Backend/turnos
+	url = git@github.com:ICaanCode/TFM-Turnos.git
+[submodule "Backend/usuarios"]
+	path = Backend/usuarios
+	url = git@github.com:ICaanCode/TFM-Usuarios.git

@@ -6,10 +6,6 @@ services:
       POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
       POSTGRES_DB: ${POSTGRES_DB}
     image: postgres:latest
-    # expose:
-    #   - ${DB_PORT}
-    # ports:
-    #   - ${DB_PORT}:5432
     restart: always
     volumes:
       - ./DB/init.sql:/docker-entrypoint-initdb.d/init.sql:ro
@@ -19,10 +15,6 @@ services:
       context: .\Backend\eureka\
       dockerfile: Dockerfile
     container_name: eureka
-    # ports:
-    #   - 8761:8761
-    # expose:
-    #   - 8761
     restart: unless-stopped
 
   gateway:
@@ -52,7 +44,6 @@ services:
     environment:
       CERT_PASSWORD: ${CERT_PASSWORD}
       DB_HOST: ${DB_HOST}
-      DB_PORT: ${DB_PORT}
       EUREKA_URL: ${EUREKA_URL}
       PACIENTES_PORT: ${PACIENTES_PORT}
       POSTGRES_DB: ${POSTGRES_DB}
@@ -72,7 +63,6 @@ services:
     environment:
       CERT_PASSWORD: ${CERT_PASSWORD}
       DB_HOST: ${DB_HOST}
-      DB_PORT: ${DB_PORT}
       EUREKA_URL: ${EUREKA_URL}
       JWT_SECRET: ${JWT_SECRET}
       POSTGRES_DB: ${POSTGRES_DB}
@@ -93,7 +83,6 @@ services:
     environment:
       CERT_PASSWORD: ${CERT_PASSWORD}
       DB_HOST: ${DB_HOST}
-      DB_PORT: ${DB_PORT}
       EUREKA_URL: ${EUREKA_URL}
       JWT_SECRET: ${JWT_SECRET}
       POSTGRES_DB: ${POSTGRES_DB}
@@ -114,7 +103,6 @@ services:
     environment:
       CERT_PASSWORD: ${CERT_PASSWORD}
       DB_HOST: ${DB_HOST}
-      DB_PORT: ${DB_PORT}
       EUREKA_URL: ${EUREKA_URL}
       JWT_SECRET: ${JWT_SECRET}
       POSTGRES_DB: ${POSTGRES_DB}
@@ -138,7 +126,6 @@ services:
     environment:
       CERT_PASSWORD: ${CERT_PASSWORD}
       DB_HOST: ${DB_HOST}
-      DB_PORT: ${DB_PORT}
       EUREKA_URL: ${EUREKA_URL}
       TURNOS_PORT: ${TURNOS_PORT}
       POSTGRES_DB: ${POSTGRES_DB}
